@@ -10,7 +10,7 @@ def predict(text):
     text_vectorized = vectorizer.transform([text_cleaned])
     prediction = model.predict(text_vectorized)
     
-    if prediction[0] == 'FAKE':
+    if prediction[0] == '0':
         return 'News is fake'
     else:
         return 'News is true'
